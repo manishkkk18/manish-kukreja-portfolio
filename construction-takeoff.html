@@ -10,21 +10,48 @@
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;700;800&family=Source+Sans+3:wght@400;600&family=Montserrat:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Montserrat:wght@500;600;700&display=swap">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="wrap">
-<a class="back" href="index.html">← All case studies</a>
-<div class="d-head">
-  <div class="d-co"><span class="logo lg"><img src="siterecon.png" alt="SiteRecon logo"></span><div class="card-co"><span class="co">SiteRecon</span><span class="co">2026</span></div></div>
-  <h1>Construction takeoff, built end to end</h1>
-  <div class="tags"><span class="tag">New product line</span><span class="tag">Zero to one</span></div>
-</div>
-<div class="block"><span class="label">Context</span><p>Construction clients needed takeoffs from their blueprints: every relevant feature marked and measured. It was a new market for a company built on outdoor-services measurements.</p></div>
-<div class="block"><span class="label">What I did</span><ul><li>Launched the product end to end: the client-facing app, the backend and the delivery workflow.</li><li>Designed the workflow with our cartography team, who mark features on each client&#x27;s blueprints and send them back.</li><li>Took it live about two months ago as a manual, service-backed product to prove demand first.</li><li>Now scoping an AI version to automate the marking.</li></ul></div>
-<div class="block"><span class="label">Results</span><div class="results"><div class="res"><b>~$500K</b><span>ARR projected for the first year</span></div><div class="res"><b>2 months</b><span>since launch</span></div></div></div>
-<nav class="nav2" aria-label="More case studies"><a href="apis-integrations.html">← APIs, a developer portal and CRM integrations</a><a href="accuprice.html">AccuPrice: AI pricing for used cars →</a></nav>
-</div>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="index.html">Manish Kukreja<span>.</span></a>
+    <nav class="nav" aria-label="Site">
+      <a href="index.html#work">Work</a>
+      <a class="hide-sm" href="index.html#career">Career</a>
+      <a class="hide-sm" href="index.html#contact">Contact</a>
+      <button class="theme-btn" id="themeBtn" type="button" aria-label="Toggle dark mode"><svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path></svg><svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg></button>
+    </nav>
+  </div>
+</header>
+<main id="main" class="wrap d-wrap">
+  <a class="back" href="index.html#work"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"></path></svg>All case studies</a>
+  <div class="d-head">
+    <div class="d-co"><span class="logos"><span class="logo"><img src="siterecon.png" alt="SiteRecon logo"></span></span><span class="co">SiteRecon <i>· 2026</i></span></div>
+    <h1>Construction takeoff, built end to end</h1>
+    <div class="tags"><span class="tag">New product line</span></div>
+  </div>
+  <div class="d-body">
+    <section class="block b-ctx" aria-labelledby="h-ctx"><h2 id="h-ctx">Context</h2><p>Construction clients needed takeoffs from their blueprints: every relevant feature marked and measured. It was a new market for a company built on outdoor-services measurements.</p></section>
+    <section class="block b-did" aria-labelledby="h-did"><h2 id="h-did">What I did</h2><ul><li>Launched the product end to end: the client-facing app, the backend and the delivery workflow.</li><li>Designed the workflow with our cartography team, who mark features on each client&#x27;s blueprints and send them back.</li><li>Took it live about two months ago as a manual, service-backed product to prove demand first.</li><li>Now scoping an AI version to automate the marking.</li></ul></section>
+    <section class="block b-res" aria-labelledby="h-res"><h2 id="h-res">Results</h2><div class="results"><div class="res"><b>~$500K</b><span>ARR projected for the first year</span></div><div class="res"><b>2 months</b><span>since launch</span></div></div></section>
+  </div>
+  <nav class="nav2" aria-label="More case studies">
+    <a class="prev" href="trust-safety.html"><small>← Previous</small>Faster listings, less fraud</a>
+    <a class="next" href="visit-health.html"><small>Next →</small>Building a retail business through partners</a>
+  </nav>
+</main>
+<footer class="footer footer-sm" id="contact"><div class="wrap"><p class="fine" style="margin-top:0">© Manish Kukreja · <a href="mailto:manishkukreja619@gmail.com">manishkukreja619@gmail.com</a> · <a href="https://www.linkedin.com/in/manish-kukreja/" target="_blank" rel="noopener">LinkedIn</a></p></div></footer>
+<script>
+(function(){var r=document.documentElement,b=document.getElementById('themeBtn');
+try{var t=localStorage.getItem('theme');if(t)r.setAttribute('data-theme',t)}catch(e){}
+if(b)b.addEventListener('click',function(){var d=r.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');var n=d==='dark'?'light':'dark';r.setAttribute('data-theme',n);try{localStorage.setItem('theme',n)}catch(e){}});
+var c=document.getElementById('copyBtn');if(c)c.addEventListener('click',function(){var e=document.getElementById('email').textContent;(navigator.clipboard?navigator.clipboard.writeText(e):Promise.reject()).then(function(){c.textContent='Copied';setTimeout(function(){c.textContent='Copy email'},1600)},function(){location.href='mailto:'+e})});
+var tb=document.querySelector('.topbar');addEventListener('scroll',function(){tb&&tb.classList.toggle('scrolled',scrollY>8)},{passive:true});
+document.querySelectorAll('.logo img').forEach(function(i){i.addEventListener('error',function(){i.parentNode.style.display='none'})});
+})();
+</script>
 </body>
 </html>
