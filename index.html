@@ -3,218 +3,103 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Senior Product Manager building marketplace, B2B and AI products. Case studies from SiteRecon, CarWale and Visit Health.">
-<meta property="og:title" content="Manish Kukreja, Senior Product Manager">
-<meta property="og:description" content="Case studies: AI pricing used by 200K+ people a month, ₹11 Cr+ ARR from dealer products, 55% lower AI compute cost.">
-<meta property="og:type" content="website">
-<style>*,*::before,*::after{box-sizing:border-box}body{margin:0}img{max-width:100%}</style>
 <title>Manish Kukreja Portfolio</title>
+<meta name="description" content="Senior Product Manager building marketplace, B2B and AI products. Case studies from SiteRecon, CarWale, Visit Health and my own IoT startup.">
+<meta property="og:title" content="Manish Kukreja Portfolio">
+<meta property="og:description" content="Senior Product Manager building marketplace, B2B and AI products. Case studies from SiteRecon, CarWale, Visit Health and my own IoT startup.">
+<meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;700;800&family=Source+Sans+3:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<style>
-/* Layout: one left-aligned reading column; case studies read like product specs (problem / what I did / result) with metric chips; career shown as a dated sequence. */
-:root{
-  --bg:#F5F7FA; --surface:#FFFFFF; --fg:#14202C; --muted:#56636F; --line:#D9DFE6;
-  --accent:#1D5BB8; --accent-soft:#E6EEFA; --metric:#9A4A06; --metric-soft:#FBF0E4;
-  --display:"Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
-  --body:"Source Sans 3", "Segoe UI", Roboto, Arial, sans-serif;
-  --mono:"IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
-}
-@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
-  --bg:#0F151C; --surface:#16202A; --fg:#E7ECF1; --muted:#9AA7B4; --line:#2A3642;
-  --accent:#7DAAF0; --accent-soft:#1B2A3E; --metric:#F2B26B; --metric-soft:#2E2218; color-scheme:dark } }
-:root[data-theme="dark"]{
-  --bg:#0F151C; --surface:#16202A; --fg:#E7ECF1; --muted:#9AA7B4; --line:#2A3642;
-  --accent:#7DAAF0; --accent-soft:#1B2A3E; --metric:#F2B26B; --metric-soft:#2E2218; color-scheme:dark }
-
-body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:17px;line-height:1.6;
-  padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
-.wrap{max-width:780px;margin:0 auto;padding-block:56px 72px;display:flex;flex-direction:column;gap:64px}
-a{color:var(--accent);text-underline-offset:3px}
-a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
-h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.15}
-.label{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
-
-/* Hero */
-header{display:flex;flex-direction:column;gap:20px}
-h1{font-size:clamp(36px,6vw,54px);font-weight:800;letter-spacing:-.02em}
-.role{font-family:var(--display);font-weight:500;font-size:clamp(19px,2.6vw,23px);color:var(--muted);max-width:40ch}
-.role strong{color:var(--fg);font-weight:700}
-.intro{max-width:62ch;margin:0}
-.links{display:flex;flex-wrap:wrap;gap:10px 22px;align-items:center;font-size:15px}
-.email{font-family:var(--mono);font-size:14px;user-select:all}
-.copy{font:500 13px var(--mono);background:var(--accent-soft);color:var(--accent);border:0;border-radius:6px;padding:5px 10px;cursor:pointer}
-.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin-top:8px}
-.stat{background:var(--surface);padding:16px 16px 14px;display:flex;flex-direction:column;gap:4px;min-width:0}
-.stat b{font-family:var(--display);font-size:26px;font-weight:800;color:var(--metric);font-variant-numeric:tabular-nums;line-height:1.1}
-.stat span{font-size:14px;color:var(--muted);line-height:1.35}
-@media (max-width:640px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
-
-/* Sections */
-section{display:flex;flex-direction:column;gap:22px}
-.sec-head{display:flex;flex-direction:column;gap:6px;border-bottom:1px solid var(--line);padding-bottom:12px}
-h2{font-size:26px;font-weight:700}
-
-/* Case studies */
-.cases{display:flex;flex-direction:column;gap:18px}
-article{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:22px 24px;display:flex;flex-direction:column;gap:14px;min-width:0}
-.meta{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:baseline}
-.co{font-family:var(--mono);font-size:12.5px;color:var(--accent);letter-spacing:.04em}
-.tag{font-family:var(--mono);font-size:11.5px;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:1px 8px}
-h3{font-size:21px;font-weight:700}
-dl{margin:0;display:grid;grid-template-columns:118px minmax(0,1fr);gap:8px 18px}
-dt{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding-top:4px}
-dd{margin:0;min-width:0}
-@media (max-width:560px){dl{grid-template-columns:1fr;gap:2px}dd{margin-bottom:10px}}
-.results{display:flex;flex-wrap:wrap;gap:8px}
-.chip{background:var(--metric-soft);color:var(--fg);border-radius:6px;padding:6px 10px;font-size:15px;line-height:1.3}
-.chip b{color:var(--metric);font-family:var(--display);font-weight:800;font-variant-numeric:tabular-nums}
-
-/* Career */
-ol.path{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
-ol.path li{display:grid;grid-template-columns:120px minmax(0,1fr);gap:18px;padding:14px 0;border-bottom:1px solid var(--line)}
-ol.path li:last-child{border-bottom:0}
-.when{font-family:var(--mono);font-size:13px;color:var(--muted);padding-top:3px;font-variant-numeric:tabular-nums}
-.what b{font-family:var(--display);font-weight:700}
-.what p{margin:2px 0 0;color:var(--muted);font-size:16px}
-@media (max-width:560px){ol.path li{grid-template-columns:1fr;gap:2px}}
-
-footer{border-top:1px solid var(--line);padding-top:22px;display:flex;flex-direction:column;gap:10px}
-footer p{margin:0;color:var(--muted);font-size:15px;max-width:62ch}
-@media (prefers-reduced-motion:no-preference){article{transition:border-color .15s}article:hover{border-color:var(--accent)}}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <div class="wrap">
-  <header>
-    <span class="label">Senior Product Manager · Delhi NCR</span>
-    <h1>Manish Kukreja</h1>
-    <p class="role">I build <strong>marketplace, B2B and AI products</strong> from zero to one, and make them pay for themselves.</p>
-    <p class="intro">Six years across a used-car marketplace with 2.5M monthly users, a health-insurtech platform, an AI SaaS company serving US businesses, and my own IoT startup before that. Below are the products I'm proudest of, with what the problem was, what I did and what changed.</p>
-    <div class="links">
-      <span class="email" id="email">manishkukreja619@gmail.com</span>
-      <button class="copy" id="copyBtn" type="button">Copy email</button>
-      <a href="https://www.linkedin.com/in/manish-kukreja/" target="_blank" rel="noopener">LinkedIn</a>
-    </div>
-    <div class="stats" aria-label="Highlights">
-      <div class="stat"><b>10+</b><span>products launched from scratch</span></div>
-      <div class="stat"><b>₹11 Cr+</b><span>ARR from dealer products at CarWale</span></div>
-      <div class="stat"><b>200K+</b><span>monthly users of an AI pricing tool</span></div>
-      <div class="stat"><b>−55%</b><span>AI compute cost at SiteRecon</span></div>
-    </div>
-  </header>
-
-  <section aria-labelledby="work">
-    <div class="sec-head">
-      <span class="label">Selected work</span>
-      <h2 id="work">Case studies</h2>
-    </div>
-    <div class="cases">
-
-      <article>
-        <div class="meta"><span class="co">SITERECON · 2026</span><span class="tag">AI infrastructure</span></div>
-        <h3>Cutting the cost of every AI order</h3>
-        <dl>
-          <dt>Problem</dt><dd>Every customer order runs through our AI model on GPUs, so compute cost and speed decide the margin on each delivery.</dd>
-          <dt>What I did</dt><dd>Forecasted demand, moved from T4 to A100 GPUs, locked in a 3-year reserved contract and set the mix of reserved and on-demand capacity. I track delivery speed and per-order margin.</dd>
-        </dl>
-        <div class="results"><span class="chip"><b>−55%</b> compute cost</span><span class="chip"><b>−75%</b> order delivery time</span></div>
-      </article>
-
-      <article>
-        <div class="meta"><span class="co">SITERECON · 2026</span><span class="tag">B2B platform</span><span class="tag">Zero to one</span></div>
-        <h3>APIs, a developer portal and CRM integrations</h3>
-        <dl>
-          <dt>Problem</dt><dd>Clients could only get their property measurements through our portal. Many wanted the data inside their own websites and CRMs.</dd>
-          <dt>What I did</dt><dd>Launched client APIs and embeddable widgets, a developer portal for API keys, domain whitelisting and support tickets, and an integration with Jobber, a leading US field-service CRM.</dd>
-        </dl>
-        <div class="results"><span class="chip"><b>50+</b> clients on the developer portal</span><span class="chip"><b>200K+</b> landscapers reachable through Jobber</span></div>
-      </article>
-
-      <article>
-        <div class="meta"><span class="co">SITERECON · 2026</span><span class="tag">New product line</span><span class="tag">Zero to one</span></div>
-        <h3>Construction takeoff, built end to end</h3>
-        <dl>
-          <dt>Problem</dt><dd>Construction clients needed takeoffs from their blueprints, a new market for a company built on outdoor-services measurements.</dd>
-          <dt>What I did</dt><dd>Built the client-facing app, the backend and the delivery workflow with our cartography team. Now scoping an AI version.</dd>
-        </dl>
-        <div class="results"><span class="chip">Live for two months, projected at <b>~$500K ARR</b> in year one</span></div>
-      </article>
-
-      <article>
-        <div class="meta"><span class="co">CARWALE · 2023–26</span><span class="tag">AI product</span><span class="tag">Zero to one</span></div>
-        <h3>AccuPrice: AI pricing for used cars</h3>
-        <dl>
-          <dt>Problem</dt><dd>Lenders, insurers and auction houses needed a reliable price for any used car, and buyers wanted the same answer.</dd>
-          <dt>What I did</dt><dd>Built an AI pricing engine on historical transaction data for the BFSI industry, then launched a consumer version on CarWale.</dd>
-        </dl>
-        <div class="results"><span class="chip"><b>90%</b> accuracy</span><span class="chip"><b>96%</b> variant coverage</span><span class="chip"><b>200K+</b> monthly users</span><span class="chip">NPS <b>+30</b></span></div>
-      </article>
-
-      <article>
-        <div class="meta"><span class="co">CARWALE · 2023–26</span><span class="tag">Trust & safety</span><span class="tag">Automation</span></div>
-        <h3>Faster listings, less fraud</h3>
-        <dl>
-          <dt>Problem</dt><dd>New listings waited about 4 hours for manual approval, and fraud was eroding buyer trust.</dd>
-          <dt>What I did</dt><dd>Built an AI-based image approval system, set up the Trust & Safety charter, and deployed automated fraud detection with better user-reporting flows.</dd>
-        </dl>
-        <div class="results"><span class="chip">Approval in <b>&lt;1 min</b></span><span class="chip"><b>4X</b> leads per listing</span><span class="chip"><b>₹0.6 Cr</b> a year saved</span><span class="chip"><b>−75%</b> fraud cases</span></div>
-      </article>
-
-      <article>
-        <div class="meta"><span class="co">CARWALE · 2023–26</span><span class="tag">Monetisation</span></div>
-        <h3>New revenue lines from dealers</h3>
-        <dl>
-          <dt>Problem</dt><dd>Dealers were the revenue engine, but every dealer, from small lots to luxury showrooms, got the same products.</dd>
-          <dt>What I did</dt><dd>Launched a premium package for luxury-car dealers with its own listing design, ranking and specs; SteerEasy, a car-inspection service with WhatsApp, SMS and calling channels; sponsored slots and lead boosts; and Justdial-style dealer microsites.</dd>
-        </dl>
-        <div class="results"><span class="chip">Luxury package: <b>₹3.6 Cr ARR</b>, ~4X a standard package</span><span class="chip">SteerEasy: <b>~₹5 Cr ARR</b></span><span class="chip">Sponsored slots: <b>₹2.5 Cr ARR</b></span><span class="chip">Dealer ARPU <b>+15%</b></span></div>
-      </article>
-
-      <article>
-        <div class="meta"><span class="co">VISIT HEALTH (POLICYBAZAAR GROUP) · 2022–23</span><span class="tag">B2B integrations</span></div>
-        <h3>Building a retail business through partners</h3>
-        <dl>
-          <dt>Problem</dt><dd>The Retail BU had just signed its first client and needed a way to plug into insurers and distributors quickly, under IRDAI rules.</dd>
-          <dt>What I did</dt><dd>As the BU's first product person, set the strategy and drove PWA and SDK integrations with partners such as Star Health and PolicyBazaar.</dd>
-        </dl>
-        <div class="results"><span class="chip"><b>1 → ~15</b> B2B clients in a year</span><span class="chip"><b>100%</b> IRDAI compliance</span></div>
-      </article>
-
-    </div>
-  </section>
-
-  <section aria-labelledby="path">
-    <div class="sec-head">
-      <span class="label">How I got here</span>
-      <h2 id="path">Career</h2>
-    </div>
-    <ol class="path">
-      <li><span class="when">2026 – now</span><div class="what"><b>Senior Product Manager, SiteRecon</b><p>AI measurement and estimation software for US landscaping, snow-removal and paving companies.</p></div></li>
-      <li><span class="when">2023 – 2026</span><div class="what"><b>Product Manager, CarTrade Tech (CarWale &amp; OLX)</b><p>Dealer monetisation, UX and Trust &amp; Safety for a 2.5M MAU used-car marketplace.</p></div></li>
-      <li><span class="when">2022 – 2023</span><div class="what"><b>Associate Product Manager, Visit Health (Policybazaar Group)</b><p>First product person in the Retail BU of a health-insurtech platform.</p></div></li>
-      <li><span class="when">2021 – 2022</span><div class="what"><b>Founder, Infinite Endurance Technologies</b><p>IoT machine-health monitoring for manufacturers. Built the MVP, hired four people and ran pilots in five factories.</p></div></li>
-      <li><span class="when">2019 – 2021</span><div class="what"><b>Assistant Manager, Vedanta</b><p>Ran maintenance for a casting and rolling line producing 500,000 tonnes a year at 99%+ availability.</p></div></li>
-    </ol>
-  </section>
-
-  <footer>
-    <span class="label">Get in touch</span>
-    <p>I'm open to Senior PM roles in marketplaces, B2B SaaS and AI. Email me or message me on LinkedIn, and I'll send my CV.</p>
-  </footer>
-</div>
-
+<header>
+  <span class="label">Senior Product Manager · Delhi NCR</span>
+  <h1>Manish Kukreja</h1>
+  <p class="role">I build <strong>marketplace, B2B and AI products</strong> from zero to one, and make them pay for themselves.</p>
+  <p class="intro">Six years across a used-car marketplace with 2.5M monthly users, a health-insurtech platform, an AI SaaS company serving US businesses, and before that my own IoT startup. Pick a case study below to see the problem, what I did and what changed.</p>
+  <div class="links">
+    <span class="email" id="email">manishkukreja619@gmail.com</span>
+    <button class="copy" id="copyBtn" type="button">Copy email</button>
+    <a href="https://www.linkedin.com/in/manish-kukreja/" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+  <div class="stats" aria-label="Highlights">
+    <div class="stat"><b>10+</b><span>products launched from scratch</span></div>
+    <div class="stat"><b>₹11 Cr+</b><span>ARR from dealer products at CarWale</span></div>
+    <div class="stat"><b>200K+</b><span>monthly users of an AI pricing tool</span></div>
+    <div class="stat"><b>−55%</b><span>AI compute cost at SiteRecon</span></div>
+  </div>
+</header>
+<section aria-labelledby="work">
+  <div class="sec-head"><span class="label">Selected work</span><h2 id="work">Case studies</h2></div>
+  <div class="grid">
+<a class="card" href="ai-compute.html">
+  <div class="card-top"><span class="badge b-sr " aria-hidden="true">SR</span><div class="card-co"><span class="co">SiteRecon · 2026</span></div></div>
+  <h3>Cutting the cost of every AI order</h3>
+  <p>Took over GPU capacity and per-order margin for SiteRecon&#x27;s AI model, and made deliveries cheaper and faster.</p>
+  <div class="card-foot"><span class="pill">−55% compute cost</span><span class="pill">−75% delivery time</span><span class="more">Read more →</span></div>
+</a>
+<a class="card" href="apis-integrations.html">
+  <div class="card-top"><span class="badge b-sr " aria-hidden="true">SR</span><div class="card-co"><span class="co">SiteRecon · 2026</span></div></div>
+  <h3>APIs, a developer portal and CRM integrations</h3>
+  <p>Turned a portal-only product into APIs, widgets and integrations, including Jobber, used by 200K+ US landscapers.</p>
+  <div class="card-foot"><span class="pill">50+ clients on the portal</span><span class="pill">200K+ landscapers reachable</span><span class="more">Read more →</span></div>
+</a>
+<a class="card" href="construction-takeoff.html">
+  <div class="card-top"><span class="badge b-sr " aria-hidden="true">SR</span><div class="card-co"><span class="co">SiteRecon · 2026</span></div></div>
+  <h3>Construction takeoff, built end to end</h3>
+  <p>Launched SiteRecon&#x27;s blueprint takeoff product for construction clients, projected at ~$500K ARR in its first year.</p>
+  <div class="card-foot"><span class="pill">~$500K ARR projected</span><span class="more">Read more →</span></div>
+</a>
+<a class="card" href="accuprice.html">
+  <div class="card-top"><span class="badge b-cw " aria-hidden="true">CW</span><div class="card-co"><span class="co">CarTrade Tech (CarWale &amp; OLX) · 2023–26</span></div></div>
+  <h3>AccuPrice: AI pricing for used cars</h3>
+  <p>An AI pricing engine for lenders, insurers and auctions, plus a consumer version used by 200K+ people a month.</p>
+  <div class="card-foot"><span class="pill">90% accuracy</span><span class="pill">200K+ monthly users</span><span class="more">Read more →</span></div>
+</a>
+<a class="card" href="trust-safety.html">
+  <div class="card-top"><span class="badge b-cw " aria-hidden="true">CW</span><div class="card-co"><span class="co">CarTrade Tech (CarWale &amp; OLX) · 2023–26</span></div></div>
+  <h3>Faster listings, less fraud</h3>
+  <p>Automated listing approval with AI and set up Trust &amp; Safety on a 2.5M MAU marketplace.</p>
+  <div class="card-foot"><span class="pill">&lt;1 min approval</span><span class="pill">−75% fraud</span><span class="more">Read more →</span></div>
+</a>
+<a class="card" href="dealer-monetisation.html">
+  <div class="card-top"><span class="badge b-cw " aria-hidden="true">CW</span><div class="card-co"><span class="co">CarTrade Tech (CarWale &amp; OLX) · 2023–26</span></div></div>
+  <h3>New revenue lines from dealers</h3>
+  <p>A luxury dealer package, a car-inspection service, sponsored slots and dealer microsites: ₹11 Cr+ ARR in total.</p>
+  <div class="card-foot"><span class="pill">₹11 Cr+ ARR</span><span class="more">Read more →</span></div>
+</a>
+<a class="card" href="visit-health.html">
+  <div class="card-top"><span class="badge b-vh " aria-hidden="true">VH</span><div class="card-co"><span class="co">Visit Health (Policybazaar Group) · 2022–23</span></div></div>
+  <h3>Building a retail business through partners</h3>
+  <p>First product person in Visit Health&#x27;s Retail BU: grew from 1 to ~15 B2B clients in a year under IRDAI rules.</p>
+  <div class="card-foot"><span class="pill">1 → ~15 clients</span><span class="more">Read more →</span></div>
+</a>
+<a class="card" href="iot-startup.html">
+  <div class="card-top"><span class="badge b-img "><img src="https://static.wixstatic.com/media/304369_1f39b2f656364df482789be907f888b7~mv2.png/v1/fill/w_130,h_126,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/iNFINITE%20ENDURANCE%20(9)%20(6).png" alt="Infinite Endurance Technologies logo" onerror="this.parentNode.classList.add('b-ie');this.parentNode.textContent='IE'"></span><div class="card-co"><span class="co">Infinite Endurance Technologies · 2021–22</span></div></div>
+  <h3>Founding an IoT predictive-maintenance startup</h3>
+  <p>Built affordable machine-health monitoring for small manufacturers, from MVP to pilots in five factories.</p>
+  <div class="card-foot"><span class="pill">5 factory pilots</span><span class="more">Read more →</span></div>
+</a>
+  </div>
+</section>
+<section aria-labelledby="path">
+  <div class="sec-head"><span class="label">How I got here</span><h2 id="path">Career</h2></div>
+  <ol class="path"><li><span class="when">2026 – now</span><span class="badge b-sr " aria-hidden="true">SR</span><div class="what"><b>Senior Product Manager, SiteRecon</b><p>AI measurement and estimation software for US landscaping, snow-removal and paving companies.</p></div></li><li><span class="when">2023 – 2026</span><span class="badge b-cw " aria-hidden="true">CW</span><div class="what"><b>Product Manager, CarTrade Tech (CarWale &amp; OLX)</b><p>Dealer monetisation, UX and Trust &amp; Safety for a 2.5M MAU used-car marketplace.</p></div></li><li><span class="when">2022 – 2023</span><span class="badge b-vh " aria-hidden="true">VH</span><div class="what"><b>Associate Product Manager, Visit Health (Policybazaar Group)</b><p>First product person in the Retail BU of a health-insurtech platform.</p></div></li><li><span class="when">2021 – 2022</span><span class="badge b-img "><img src="https://static.wixstatic.com/media/304369_1f39b2f656364df482789be907f888b7~mv2.png/v1/fill/w_130,h_126,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/iNFINITE%20ENDURANCE%20(9)%20(6).png" alt="Infinite Endurance Technologies logo" onerror="this.parentNode.classList.add('b-ie');this.parentNode.textContent='IE'"></span><div class="what"><b>Founder, <a href="https://www.infiniteendurancetech.com/" target="_blank" rel="noopener">Infinite Endurance Technologies</a></b><p>IoT machine-health monitoring for small manufacturers. Built the MVP, hired four people and ran pilots in five factories.</p></div></li><li><span class="when">2019 – 2021</span><span class="badge b-vd " aria-hidden="true">V</span><div class="what"><b>Assistant Manager, Vedanta</b><p>Ran maintenance for a casting and rolling line producing 500,000 tonnes a year at 99%+ availability.</p></div></li></ol>
+</section>
+<footer>
+  <span class="label">Get in touch</span>
+  <p>I'm open to Senior PM roles in marketplaces, B2B SaaS and AI. Email me or message me on LinkedIn, and I'll send my CV.</p>
+</footer>
 <script>
-document.getElementById('copyBtn').addEventListener('click', function(){
-  var btn=this, text=document.getElementById('email').textContent.trim();
-  function selectIt(){ var r=document.createRange(); r.selectNodeContents(document.getElementById('email')); var s=getSelection(); s.removeAllRanges(); s.addRange(r); btn.textContent='Selected, press Ctrl+C'; }
-  try{
-    navigator.clipboard.writeText(text).then(function(){ btn.textContent='Copied'; setTimeout(function(){btn.textContent='Copy email';},1800); }, selectIt);
-  }catch(e){ selectIt(); }
+document.getElementById('copyBtn').addEventListener('click',function(){
+  var btn=this,el=document.getElementById('email'),text=el.textContent.trim();
+  function sel(){var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);btn.textContent='Selected, press Ctrl+C';}
+  try{navigator.clipboard.writeText(text).then(function(){btn.textContent='Copied';setTimeout(function(){btn.textContent='Copy email';},1800);},sel);}catch(e){sel();}
 });
 </script>
-
+</div>
 </body>
 </html>
