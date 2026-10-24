@@ -54,12 +54,12 @@ a.card:hover{border-color:var(--accent)}
 .pill{background:var(--metric-soft);color:var(--metric);font:800 13.5px var(--display);border-radius:6px;padding:3px 8px;font-variant-numeric:tabular-nums}
 .more{margin-left:auto;font:500 13px var(--mono);color:var(--accent)}
 ol.path{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
-ol.path li{display:grid;grid-template-columns:110px 34px minmax(0,1fr);gap:16px;align-items:start;padding:14px 0;border-bottom:1px solid var(--line)}
+ol.path li{display:grid;grid-template-columns:110px 160px minmax(0,1fr);gap:16px;align-items:start;padding:14px 0;border-bottom:1px solid var(--line)}
 ol.path li:last-child{border-bottom:0}
 .when{font-family:var(--mono);font-size:13px;color:var(--muted);padding-top:6px;font-variant-numeric:tabular-nums}
 .what b{font-family:var(--display);font-weight:700}
 .what p{margin:2px 0 0;color:var(--muted);font-size:16px}
-@media (max-width:560px){ol.path li{grid-template-columns:34px minmax(0,1fr)}.when{grid-column:1/-1;padding-top:0}}
+@media (max-width:560px){ol.path li{grid-template-columns:minmax(0,1fr);gap:8px}.when{grid-column:1/-1;padding-top:0}}
 footer{border-top:1px solid var(--line);padding-top:22px;display:flex;flex-direction:column;gap:10px}
 footer p{margin:0;color:var(--muted);font-size:15px;max-width:62ch}
 /* detail page */
@@ -80,3 +80,9 @@ footer p{margin:0;color:var(--muted);font-size:15px;max-width:62ch}
 .ext{display:inline-flex;gap:8px;align-items:center;font-weight:600}
 .nav2{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:20px;font-size:15px}
 @media (prefers-reduced-motion:no-preference){a.card{transition:border-color .15s}}
+
+.logo{display:inline-flex;align-items:center;justify-content:center;flex:none;height:36px;max-width:100%;padding:5px 8px;background:#FFFFFF;border:1px solid var(--line);border-radius:8px}
+.logo img{height:100%;width:auto;max-width:150px;object-fit:contain;display:block}
+.logo.lg{height:52px;padding:8px 12px;border-radius:12px}
+.logo.lg img{max-width:200px}
+.logos{display:flex;flex-wrap:wrap;gap:6px;align-items:center;min-width:0}
