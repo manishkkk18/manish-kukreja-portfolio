@@ -4,7 +4,7 @@
   --b-sr:#1F6F5C; --b-cw:#B4351E; --b-vh:#5B3FA8; --b-ie:#0F5E8A; --b-vd:#6B5B3E; --badge-fg:#FFFFFF;
   --display:"Schibsted Grotesk","Helvetica Neue",Arial,sans-serif;
   --body:"Source Sans 3","Segoe UI",Roboto,Arial,sans-serif;
-  --mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+  --mono:"Montserrat","Segoe UI",Roboto,Arial,sans-serif;
 }
 @media (prefers-color-scheme: dark){:root{
   --bg:#0F151C; --surface:#16202A; --fg:#E7ECF1; --muted:#9AA7B4; --line:#2A3642;
@@ -54,7 +54,7 @@ a.card:hover{border-color:var(--accent)}
 .pill{background:var(--metric-soft);color:var(--metric);font:800 13.5px var(--display);border-radius:6px;padding:3px 8px;font-variant-numeric:tabular-nums}
 .more{margin-left:auto;font:500 13px var(--mono);color:var(--accent)}
 ol.path{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
-ol.path li{display:grid;grid-template-columns:110px 160px minmax(0,1fr);gap:16px;align-items:start;padding:14px 0;border-bottom:1px solid var(--line)}
+ol.path li{display:grid;grid-template-columns:110px 128px minmax(0,1fr);gap:16px;align-items:start;padding:14px 0;border-bottom:1px solid var(--line)}
 ol.path li:last-child{border-bottom:0}
 .when{font-family:var(--mono);font-size:13px;color:var(--muted);padding-top:6px;font-variant-numeric:tabular-nums}
 .what b{font-family:var(--display);font-weight:700}
@@ -81,8 +81,25 @@ footer p{margin:0;color:var(--muted);font-size:15px;max-width:62ch}
 .nav2{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:20px;font-size:15px}
 @media (prefers-reduced-motion:no-preference){a.card{transition:border-color .15s}}
 
-.logo{display:inline-flex;align-items:center;justify-content:center;flex:none;height:36px;max-width:100%;padding:5px 8px;background:#FFFFFF;border:1px solid var(--line);border-radius:8px}
-.logo img{height:100%;width:auto;max-width:150px;object-fit:contain;display:block}
-.logo.lg{height:52px;padding:8px 12px;border-radius:12px}
-.logo.lg img{max-width:200px}
-.logos{display:flex;flex-wrap:wrap;gap:6px;align-items:center;min-width:0}
+/* company logos: transparent PNGs, sized to sit with text */
+.logo{display:inline-flex;align-items:center;flex:none;height:18px;line-height:0}
+.logo img{height:100%;width:auto;max-width:110px;display:block}
+.logo.lg{height:26px}
+.logo.lg img{max-width:170px}
+.logos{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center;min-width:0}
+ol.path .logo{height:22px;margin-top:2px}
+ol.path .logos{flex-direction:column;align-items:flex-start;gap:8px}
+.card-top{flex-direction:column;align-items:flex-start;gap:8px}
+.d-co{flex-direction:column;align-items:flex-start;gap:10px}
+.d-co .card-co{flex-direction:row;gap:12px;flex-wrap:wrap}
+@media (prefers-color-scheme: dark){.logo{background:#FFFFFF;border-radius:6px;padding:4px 7px;height:26px}.logo.lg{height:34px;padding:5px 9px}ol.path .logo{height:28px}}
+@media (max-width:560px){ol.path .logos{flex-direction:row}}
+
+/* friendlier labels: Montserrat, slightly larger */
+.label{font-size:12.5px;font-weight:600;letter-spacing:.07em}
+header > .label{font-size:15px;color:var(--fg);letter-spacing:.06em}
+.co{font-size:13px;font-weight:600;letter-spacing:.03em}
+.email{font-size:14.5px;font-weight:500}
+.more,.back,.copy{font-weight:600}
+.tag{font-size:12.5px;font-weight:500}
+.when{font-size:13.5px;font-weight:600}
