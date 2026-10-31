@@ -135,10 +135,30 @@
       <span class="label">Get in touch</span>
       <p>I'm open to Senior PM roles in marketplaces, B2B SaaS and AI. Email me or message me on LinkedIn, and I'll send my CV.</p>
       <div class="contact">
-        <a class="btn copy" href="mailto:manishkukreja619@gmail.com">manishkukreja619@gmail.com</a>
+        <span class="email-chip"><a class="email" href="mailto:manishkukreja619@gmail.com">manishkukreja619@gmail.com</a><button class="btn copy" type="button" aria-label="Copy email address"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"></rect><path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1"></path></svg> Copy</button></span>
         <a class="btn btn-ghost" href="https://www.linkedin.com/in/manish-kukreja/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"></path></svg>LinkedIn</a>
         <a class="btn btn-ghost" href="Manish_Kukreja_CV.pdf" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"></path></svg>Download CV</a>
       </div>
+    <form class="cform" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+      <h3>Or send me a note</h3>
+      <p class="sub">Takes a minute. It comes straight to my inbox.</p>
+      <input type="hidden" name="access_key" value="a6b0ed73-392d-4c37-8e34-6415d0125fb6">
+      <input type="hidden" name="from_name" value="Portfolio website">
+      <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <div class="row two">
+        <div><label for="cf-name">Name</label><input id="cf-name" name="name" type="text" required autocomplete="name"></div>
+        <div><label for="cf-email">Email</label><input id="cf-email" name="email" type="email" required autocomplete="email"></div>
+      </div>
+      <div class="row two">
+        <div><label for="cf-purpose">I am reaching out about</label>
+          <select id="cf-purpose" name="purpose" required>
+            <option>Hiring for a role</option><option>Referral or intro</option><option>Collaboration</option><option>Just saying hi</option>
+          </select></div>
+        <div><label for="cf-company">Company <span style="font-weight:500">(optional)</span></label><input id="cf-company" name="company" type="text" autocomplete="organization"></div>
+      </div>
+      <div class="row"><div><label for="cf-msg">Message</label><textarea id="cf-msg" name="message" required maxlength="500" placeholder="Role, link, or anything useful (500 characters max)"></textarea></div></div>
+      <div class="actions"><button type="submit">Send message</button><span class="form-status" id="formStatus" role="status" aria-live="polite"></span></div>
+    </form>
     </div>
     <p class="fine">© Manish Kukreja</p>
   </div>
@@ -147,7 +167,8 @@
 (function(){var r=document.documentElement,b=document.getElementById('themeBtn');
 try{var t=localStorage.getItem('theme');if(t)r.setAttribute('data-theme',t)}catch(e){}
 if(b)b.addEventListener('click',function(){var d=r.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');var n=d==='dark'?'light':'dark';r.setAttribute('data-theme',n);try{localStorage.setItem('theme',n)}catch(e){}});
-var c=document.getElementById('copyBtn');if(c)c.addEventListener('click',function(){var e=document.getElementById('email').textContent;(navigator.clipboard?navigator.clipboard.writeText(e):Promise.reject()).then(function(){c.textContent='Copied';setTimeout(function(){c.textContent='Copy email'},1600)},function(){location.href='mailto:'+e})});
+document.querySelectorAll('button.copy').forEach(function(c){c.addEventListener('click',function(){var e='manishkukreja619@gmail.com',n=c.lastChild,o=n.textContent;function ok(){n.textContent=' Copied';setTimeout(function(){n.textContent=o},1600)}if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(e).then(ok,function(){location.href='mailto:'+e})}else{location.href='mailto:'+e}})});
+var f=document.getElementById('contactForm');if(f)f.addEventListener('submit',function(e){e.preventDefault();var st=document.getElementById('formStatus'),btn=f.querySelector('button[type=submit]');if(f.botcheck&&f.botcheck.checked)return;var o={};new FormData(f).forEach(function(v,k){o[k]=v});o.subject='Portfolio enquiry: '+o.purpose+' - '+o.name;btn.disabled=true;btn.textContent='Sending...';st.className='form-status';st.textContent='';fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(o)}).then(function(r){return r.json()}).then(function(j){if(!j.success)throw 0;f.reset();st.textContent='Thanks! I will reply within 2 days.';st.className='form-status ok';btn.textContent='Sent'}).catch(function(){st.textContent='Could not send. Please email me directly.';st.className='form-status err';btn.disabled=false;btn.textContent='Send message'})});
 var tb=document.querySelector('.topbar');addEventListener('scroll',function(){tb&&tb.classList.toggle('scrolled',scrollY>8)},{passive:true});
 document.querySelectorAll('.logo img').forEach(function(i){i.addEventListener('error',function(){i.parentNode.style.display='none'})});
 })();

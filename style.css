@@ -238,3 +238,26 @@ ol.path li.is-founder .when{color:var(--accent-ink)}
 /* logos are dark-on-transparent: give them a light chip in dark mode */
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .logo{background:#fff;border-radius:6px;padding:3px 6px;box-sizing:content-box}}
 :root[data-theme="dark"] .logo{background:#fff;border-radius:6px;padding:3px 6px;box-sizing:content-box}
+
+/* ---------- email chip + contact form ---------- */
+.email-chip .email{text-decoration:none}
+.copy svg{width:15px;height:15px}
+.cform{margin-top:28px;padding-top:24px;border-top:1px solid var(--line);max-width:640px}
+.cform h3{font-family:var(--label);font-size:15px;font-weight:700;letter-spacing:.01em;margin:0 0 4px;color:var(--ink)}
+.cform .sub{margin:0 0 16px;color:var(--muted);font-size:14px}
+.cform .row{display:grid;grid-template-columns:1fr;gap:12px;margin-bottom:12px}
+@media (min-width:640px){.cform .row.two{grid-template-columns:1fr 1fr}}
+.cform label{display:block;font-family:var(--label);font-size:12.5px;font-weight:600;letter-spacing:.03em;color:var(--muted);margin-bottom:6px}
+.cform input,.cform select,.cform textarea{width:100%;box-sizing:border-box;font:inherit;font-size:16px;color:var(--ink);background:var(--surface);
+  border:1px solid var(--line);border-radius:12px;padding:11px 14px;min-height:44px}
+.cform textarea{min-height:110px;resize:vertical}
+.cform input:focus,.cform select:focus,.cform textarea:focus{outline:2px solid var(--accent);outline-offset:1px;border-color:var(--accent)}
+.cform .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.cform .actions{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:4px}
+.cform button[type=submit]{background:var(--accent);color:#fff;border:0;min-height:44px;padding:0 22px;border-radius:999px;font-family:var(--label);font-weight:600;font-size:13.5px;letter-spacing:.02em;cursor:pointer}
+:root[data-theme="dark"] .cform button[type=submit]{color:#1A1714}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .cform button[type=submit]{color:#1A1714}}
+.cform button[type=submit]:disabled{opacity:.6;cursor:default}
+.form-status{font-size:14px;color:var(--muted)}
+.form-status.ok{color:var(--accent-ink)}
+.form-status.err{color:#B91C1C}
