@@ -261,3 +261,41 @@ ol.path li.is-founder .when{color:var(--accent-ink)}
 .form-status{font-size:14px;color:var(--muted)}
 .form-status.ok{color:var(--accent-ink)}
 .form-status.err{color:#B91C1C}
+
+/* India Night Lights */
+.card-thumb{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;border-radius:calc(var(--radius) - 6px);border:1px solid var(--line);background:var(--surface-2)}
+.inl-actions{display:flex;flex-wrap:wrap;gap:10px}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{color:#fff;filter:brightness(1.06)}
+:root[data-theme="dark"] .btn-primary,:root[data-theme="dark"] .btn-primary:hover{color:#1A1714}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .btn-primary,:root:not([data-theme="light"]) .btn-primary:hover{color:#1A1714}}
+.inl-shot{margin:0;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--surface-2);box-shadow:var(--shadow)}
+.inl-shot img{width:100%;height:auto}
+.inl-hero{margin-bottom:clamp(32px,4vw,48px)}
+.card-body{display:flex;flex-direction:column;gap:16px;min-width:0;flex:1}
+@media (min-width:720px){
+  a.card.card-wide{grid-column:1/-1;flex-direction:row;align-items:stretch;gap:clamp(24px,3vw,36px)}
+  a.card.card-wide .card-thumb{flex:0 0 52%;width:52%;align-self:center}
+}
+.inl-more{display:flex;flex-direction:column;gap:clamp(40px,5vw,64px);padding-block:clamp(32px,4vw,48px) clamp(40px,6vw,72px);border-top:1px solid var(--line)}
+.block .inl-decisions li b{color:var(--ink)}
+.inl-flow{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:minmax(0,1fr);gap:28px;counter-reset:step}
+@media (min-width:760px){.inl-flow{grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}}
+.block .inl-flow{max-width:none}
+.block .inl-flow li{counter-increment:step;display:flex;flex-direction:column;gap:6px;padding:18px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);line-height:1.45}
+.block .inl-flow li::before{content:counter(step,decimal-leading-zero);position:static;width:auto;height:auto;background:none;border-radius:0;transform:none;font-family:var(--label);font-size:12.5px;font-weight:700;letter-spacing:.08em;color:var(--accent-ink)}
+.inl-flow li b{font-size:17px;line-height:1.3}
+.inl-flow li span{font-size:14.5px;color:var(--muted)}
+.inl-flow li:not(:last-child)::after{content:"↓";position:absolute;left:50%;bottom:-24px;transform:translateX(-50%);color:var(--accent);font-weight:700;line-height:1}
+@media (min-width:760px){.inl-flow li:not(:last-child)::after{content:"→";left:auto;right:-19px;bottom:auto;top:50%;transform:translateY(-50%)}}
+.inl-note{font-size:16px;color:var(--muted)}
+.inl-gallery{display:grid;grid-template-columns:minmax(0,1fr);gap:24px}
+@media (min-width:720px){.inl-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.inl-fig{margin:0;display:flex;flex-direction:column;gap:10px;min-width:0}
+.inl-fig figcaption{font-size:15px;line-height:1.5;color:var(--muted)}
+.inl-mobile{display:grid;grid-template-columns:minmax(0,1fr);gap:16px;align-items:center;margin-top:8px}
+.inl-mobile .inl-shot{max-width:260px;width:100%;justify-self:center}
+@media (min-width:720px){.inl-mobile{grid-template-columns:260px minmax(0,1fr);gap:32px}.inl-mobile .inl-shot{justify-self:start}}
+.inl-mobile p{font-size:17px;color:var(--muted);max-width:40ch}
+.block p.inl-caveat{font-size:16px;color:var(--muted);border-left:3px solid var(--accent);padding-left:14px;max-width:70ch}
+.inl-caveat b{color:var(--ink)}
