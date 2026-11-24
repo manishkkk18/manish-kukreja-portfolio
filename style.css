@@ -263,7 +263,6 @@ ol.path li.is-founder .when{color:var(--accent-ink)}
 .form-status.err{color:#B91C1C}
 
 /* India Night Lights */
-.card-thumb{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;border-radius:calc(var(--radius) - 6px);border:1px solid var(--line);background:var(--surface-2)}
 .inl-actions{display:flex;flex-wrap:wrap;gap:10px}
 .btn-primary{background:var(--accent);color:#fff}
 .btn-primary:hover{color:#fff;filter:brightness(1.06)}
@@ -272,11 +271,6 @@ ol.path li.is-founder .when{color:var(--accent-ink)}
 .inl-shot{margin:0;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--surface-2);box-shadow:var(--shadow)}
 .inl-shot img{width:100%;height:auto}
 .inl-hero{margin-bottom:clamp(32px,4vw,48px)}
-.card-body{display:flex;flex-direction:column;gap:16px;min-width:0;flex:1}
-@media (min-width:720px){
-  a.card.card-wide{grid-column:1/-1;flex-direction:row;align-items:stretch;gap:clamp(24px,3vw,36px)}
-  a.card.card-wide .card-thumb{flex:0 0 52%;width:52%;align-self:center}
-}
 .inl-more{display:flex;flex-direction:column;gap:clamp(40px,5vw,64px);padding-block:clamp(32px,4vw,48px) clamp(40px,6vw,72px);border-top:1px solid var(--line)}
 .block .inl-decisions li b{color:var(--ink)}
 .inl-flow{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:minmax(0,1fr);gap:28px;counter-reset:step}
@@ -299,3 +293,26 @@ ol.path li.is-founder .when{color:var(--accent-ink)}
 .inl-mobile p{font-size:17px;color:var(--muted);max-width:40ch}
 .block p.inl-caveat{font-size:16px;color:var(--muted);border-left:3px solid var(--accent);padding-left:14px;max-width:70ch}
 .inl-caveat b{color:var(--ink)}
+
+/* India from data */
+.side .sec-head h2{font-size:clamp(24px,3vw,32px)}
+.side-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:14px}
+@media (min-width:560px){.side-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (min-width:1000px){.side-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+a.side-card{display:flex;flex-direction:column;gap:8px;padding:12px 12px 16px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);color:var(--ink);text-decoration:none;min-width:0;transition:border-color .2s}
+a.side-card:hover{border-color:color-mix(in srgb,var(--accent) 45%,var(--line));color:var(--ink)}
+a.side-card img{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;border-radius:10px;border:1px solid var(--line);background:var(--surface-2);margin-bottom:4px}
+a.side-card h3{font-size:16.5px;font-weight:700;letter-spacing:-.01em;line-height:1.3;padding-inline:4px}
+a.side-card p{font-size:14px;line-height:1.5;color:var(--muted);padding-inline:4px}
+a.side-card .more{padding-inline:4px;font-size:12.5px}
+a.side-card .more svg{width:14px;height:14px}
+.side-all{margin-top:18px}
+.side-all a{display:inline-flex;align-items:center;gap:6px;font-family:var(--label);font-size:13px;font-weight:600}
+.side-all svg{width:14px;height:14px}
+@media (max-width:559px){
+  a.side-card{display:grid;grid-template-columns:108px minmax(0,1fr);column-gap:12px;row-gap:4px;padding:10px;align-items:start}
+  a.side-card img{grid-row:1/4;margin:0;border-radius:8px}
+  a.side-card h3{font-size:15.5px;padding:0}
+  a.side-card p{font-size:13.5px;padding:0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  a.side-card .more{padding:0}
+}
